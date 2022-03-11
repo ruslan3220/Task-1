@@ -4,18 +4,18 @@ var sampleText =
 
 function modifyText(text) {
   // Swap words
-  var newBut = text.split(" ");
-  var book = newBut.reverse();
-  var shelf = book.toString();
-  var hobbi = shelf.replaceAll(",", " ");
+  var newArr = text.split(" ");
+  var swapWord = newArr.reverse();
+  var stringWord = swapWord.toString();
+  var newWord = stringWord.replaceAll(",", " ");
   // Opposite words
-  var look = text.split("");
-  var like = look.reverse();
-  var fixed = like.toString();
-  var food = fixed.replaceAll(",", "");
+  var newArray = text.split("");
+  var oppositeWord = newArray.reverse();
+  var strWord = oppositeWord.toString();
+  var newOpposite = strWord.replaceAll(",", "");
   // Answer
   return `
-  result1: ${hobbi},
-  result2: ${food}`;
+  result1: ${newWord},
+  result2: ${newOpposite}`;
 }
 console.log(modifyText(sampleText));
